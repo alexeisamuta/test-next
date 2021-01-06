@@ -5,6 +5,7 @@ import {Timer} from "../common/components/Timer"
 import {MainLayout} from "../common/components/MainLayout"
 import {itemFromArrayType} from "../common/types/types"
 import styles from "../common/styles/Home.module.css"
+import FeedBackForm from "../common/components/FeedBackForm"
 
 export default function Home({data: serverData}: { data: Array<itemFromArrayType> }) {
 
@@ -30,20 +31,25 @@ export default function Home({data: serverData}: { data: Array<itemFromArrayType
 
     return (
         <MainLayout>
-            <div className={styles.container}>
-                <div>
-                    <Timer/>
+            <div className={styles.containerPage}>
+                <div className={styles.container}>
+                    <div>
+                        <Timer/>
+                    </div>
+                    <h1> Displaying objects </h1>
+                    <div className={styles.itemsArray}>
+                        {data.map(elem => (
+                            <div key={elem.id} className={styles.itemArray}>
+                                <Link href={`/[id]`} as={`/${elem.id}`}>
+                                    <a>{elem.title}</a>
+                                </Link>
+                                <pre>{JSON.stringify(elem, null, 2)}</pre>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <h1> Displaying objects </h1>
-                <div className={styles.itemsArray}>
-                    {data.map(elem => (
-                        <div key={elem.id} className={styles.itemArray}>
-                            <Link href={`/[id]`} as={`/${elem.id}`}>
-                                <a>{elem.title}</a>
-                            </Link>
-                            <pre>{JSON.stringify(elem, null, 2)}</pre>
-                        </div>
-                    ))}
+                <div className={styles.containerFeedBack}>
+                    <FeedBackForm/>
                 </div>
             </div>
         </MainLayout>

@@ -1,5 +1,5 @@
 .allTimer {
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -68,5 +68,24 @@
     .timer_section > div.timer_section_desc {
         font-size: 14px;
         line-height: 26px;
+    }
+}
+
+@media (max-width: 440px) {
+    .timer_section > div {
+        font-size: 15px;
+        width: 15px;
+        line-height: 20px;
+    }
+
+    .timer_delimetr {
+        line-height: 20px;
+        font-size: 10px;
+        margin: 0
+    }
+
+    .timer_section > div.timer_section_desc {
+        font-size: 10px;
+        line-height: 13px;
     }
 }

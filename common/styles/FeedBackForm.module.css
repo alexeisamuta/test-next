@@ -1,0 +1,62 @@
+.fullForm {
+    margin-top: 60px;
+    max-width: 100%;
+}
+
+.fullForm p {
+    color: red;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.fullForm p::before {
+    display: inline;
+    content: "⚠ ";
+}
+
+.fullForm input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #0a0909;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.fullForm label {
+    line-height: 2;
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.fullForm textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #0a0909;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.fullForm input[type="submit"] {
+    background: darkblue;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+
+.error {
+    color: red;
+}
