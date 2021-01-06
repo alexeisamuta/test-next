@@ -1,0 +1,22 @@
+.nav {
+    position: fixed;
+    height: 60px;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: darkblue;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.main {
+    margin-top: 10px;
+    padding: 1rem;
+}

@@ -1,0 +1,72 @@
+.allTimer {
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.datePicker {
+    z-index: 0;
+}
+
+.timer {
+    font-size: 0;
+    text-align: center;
+}
+
+.timer_section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.timer_section > div {
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 50px;
+    background: darkblue;
+    color: #ffffff;
+    line-height: 70px;
+    width: 55px;
+    margin: 0 1px;
+    border-radius: 2px;
+}
+
+.timer_section > div.timer_section_desc {
+    display: block;
+    background: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 30px;
+    width: auto;
+    margin: 0;
+}
+
+.timer_delimetr {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 50px;
+    line-height: 70px;
+    margin: 0 5px;
+}
+
+@media (max-width: 767px) {
+    .timer_section > div {
+        font-size: 30px;
+        width: 30px;
+        line-height: 40px;
+    }
+
+    .timer_delimetr {
+        line-height: 40px;
+        font-size: 30px;
+    }
+
+    .timer_section > div.timer_section_desc {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
